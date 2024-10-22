@@ -1,0 +1,31 @@
+[project]
+name = "shadowmark"
+authors = [
+    { name = "Martin Pres", email = "martin.pres@prespol.cz" }
+]
+description = "Embeds/extracts watermark to/from image using blind DWR-DCT approach."
+dynamic = ["version", "readme"]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy==2.1.1",
+    "pillow==10.4.0",
+    "PyWavelets==1.7.0",
+    "scipy==1.14.1"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.3.3",
+    "pytest-cov==5.0.0"
+]
+
+[project.scripts]
+shadowmark = "src.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = { file = ["version"] }
+readme = { file = ["README.md"] }
