@@ -1,0 +1,10 @@
+[run]
+source = src/
+omit =
+    test/
+    src/__main__.py
+
+[report]
+show_missing = True
+skip_covered = True
+skip_empty = True
